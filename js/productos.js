@@ -1,0 +1,46 @@
+const productos = [
+    {
+        numero: 1,
+        titulo: "Plan Inicio",
+        detalle1: "Consulta inicial + control",
+        detalle2: "Plan nutricional para 1 mes",
+        precio: 60
+    },
+    {
+        numero: 2,
+        titulo: "Plan Pro",
+        detalle1: "Bono de 3 consultas",
+        detalle2: "Plan nutricional para 3 meses",
+        precio: 108
+    },
+    {
+        numero: 3,
+        titulo: "Plan Expert",
+        detalle1: "Bono de 6 consultas",
+        detalle2: "Plan nutricional para 6 meses",
+        precio: 60
+    },
+    {
+        numero: 4,
+        titulo: "Vegana",
+        detalle1: "20 comidas saladas",
+        detalle2: "15 comidas dulces",
+        precio: 10
+    },
+    {
+        numero: 5,
+        titulo: "Vegetariana",
+        detalle1: "20 comidas saladas",
+        detalle2: "15 comidas dulces",
+        precio: 10
+    },
+    {
+        numero: 6,
+        titulo: "Carnívora",
+        detalle1: "40 comidas saladas",
+        detalle2: "30 comidas dulces",
+        precio: 19
+    }
+   
+]
+

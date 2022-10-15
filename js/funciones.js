@@ -1,21 +1,60 @@
+//Declaración de variables generales
+let numero = 0
+let cantidad = 0
+let precio = 0
+let preciofinal = 0
+let nombreVoucher = ""
+let comprar = false
+let string_productos = ""
+let ArrayProductos = []
+let sumaTotal = 0
+
+
+class Producto{
+    constructor(numero, nombre, precio, cantidad){
+        this.numero = numero
+        this.nombre = nombre
+        this.precio = precio
+        this.cantidad = cantidad
+    }
+}
+
+
 function saludar() {
     let nombre = prompt("Ingrese su nombre por favor:")
     alert("Bienvenid@ a Allonutrición " + nombre + " !")
 }
 
-function servicios() {
-    let serviciosDisponibles = "Planes y recetarios disponibles: \n" +
-        "Nº 1: Plan Inicio \n" +
-        "Nº 2: Plan Pro \n" +
-        "Nº 3: Plan Expert \n" +
-        "Nº 4: Receta Vegana \n" +
-        "Nº 5: Receta Vegetariana \n" +
-        "Nº 6: Receta Carnívora \n"
+saludar()
 
-    alert(serviciosDisponibles)
+
+function productosDisponibles() {
+    for (let producto of productos){
+        string_productos += `Nº ${producto.numero} : ${producto.titulo} , incluye: \n
+        ${producto.detalle1}\n
+        ${producto.detalle2}\n
+        Precio: $ ${producto.precio}\n`
+    }
+    alert(string_productos)
 }
 
+
 // Proceso de compra
+do{
+    comprar = confirm("Si desea comprar pulse 'OK', caso contrario 'Cancel'")
+    if(comprar == false){
+        break
+    }else{
+        productosDisponibles()
+        procesoDeCompra()
+        cantidadTotal()
+        precioIndividualProducto()
+    }
+
+}
+while (comprar == true)
+
+
 function procesoDeCompra() {
     numero = parseInt(prompt("Ingresa el numero de plan o recetario que desea comprar(1 al 6):"))
 
@@ -51,30 +90,39 @@ function descuento() {
     }
 }
 
-// Cálculo del precio total en función de descuentos
-function precioTotal() {
+// Cálculo del precio inidividual en función de descuentos
+function precioIndividualProducto() {
 
     let myVoucher = descuento()
-    const descuento_voucher = 0.85 //Descuento del 15%
-    const producto_precio = { 1: 60, 2: 108, 3: 168, 4: 10, 5: 10, 6: 19 };
+    const descuento_voucher = 0.85 //Descuento del 15%;
+    let resultado = productos.find(prod => prod.numero === numero)
+    
+    if (myVoucher == true) {
+        precio = resultado.precio * cantidad * descuento_voucher
+        console.log(resultado.precio)
+        ArrayProductos.push(new Producto(numero, resultado.titulo , precio, cantidad))
+        console.table(ArrayProductos)
 
-    for (let x in producto_precio) {
-        if (numero == x) {
-            if (myVoucher == true) {
-                precioFinal = producto_precio[x] * cantidad * descuento_voucher
-                alert("El precio con descuento es de: " + precioFinal)
-            } else {
-                precioFinal = producto_precio[x] * cantidad
-                alert("El precio es de: " + precioFinal)
-            }
-        }
+        precioTotalCarrito()
+        alert("¡Se ha agregado correctamente al carrito!\n La suma total de la compra es : " + sumaTotal)
+
+    } else {
+        precio = resultado.precio * cantidad
+        ArrayProductos.push(new Producto(numero, resultado.titulo , precio, cantidad))
+        console.table(ArrayProductos)
+
+        precioTotalCarrito()
+        alert("¡Se ha agregado correctamente al carrito!\n La suma total de la compra es : " + sumaTotal)
     }
 }
 
-
-
-
-
+// Cálculo del precio total del carrito
+function precioTotalCarrito() {
+    sumaTotal = 0
+    ArrayProductos.forEach(prod => {
+        sumaTotal += prod.precio
+    })
+}
 
 
 
