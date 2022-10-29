@@ -12,8 +12,9 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #eecda3, #ef6277);
+    min-height: 100vh;
 }
-
 
 /* Header */
 .navbar {
@@ -27,14 +28,20 @@ body {
 }
 
 .nav-link:hover {
-    color: #ec5e59dc;
+    color: #ef6277;
     text-decoration: underline;
 }
 
 .navLogo img {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    height: 2rem;
+    height: 4rem;
+}
+
+.fa-solid.fa-cart-shopping {
+    font-size: 5rem;
+    color: black;
+    margin: 1rem;
 }
 
 /* Section Main-container */
@@ -54,6 +61,8 @@ body {
     text-align: center;
     width: 45%;
     margin-right: 20px;
+    background: linear-gradient(to right, #eecda3, #ef6277);
+    border-radius: 3rem;
 }
 
 .box h1 {
@@ -73,13 +82,13 @@ body {
     margin-bottom: 3rem;
     font-size: 2rem;
     font-weight: lighter;
+    color: black;
 }
 
 .button {
     margin-top: 1rem;
     margin-bottom: 2rem;
     padding: 1rem;
-    background-color: white;
     font-size: 1.8rem;
     border-radius: 2rem;
     cursor: pointer;
@@ -102,7 +111,6 @@ body {
 .title {
     text-align: center;
     padding: 3rem;
-    background-color: #ec5e59dc;
     margin-top: 3rem;
 }
 
@@ -110,6 +118,7 @@ body {
     font-size: 3rem;
     font-weight: bold;
     text-transform: capitalize;
+    text-decoration: underline;
 }
 
 
@@ -118,7 +127,6 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #ec5e5986;
     flex-wrap: wrap;
 }
 
@@ -129,6 +137,7 @@ body {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 2px 4px 0 rgba(6, 6, 6, 0.6);
+    color: black;
 }
 
 .card-body {
@@ -153,6 +162,7 @@ body {
     text-decoration: underline;
     font-weight: bold;
     font-size: 2.5rem;
+    color: black;
 }
 
 .card-price {
@@ -164,7 +174,7 @@ body {
 .button-buy {
     margin-bottom: 2rem;
     padding: 1rem;
-    background-color: #ec5e59dc;
+    background-color: #ef6277;
     font-size: 1.8rem;
     border-radius: 2rem;
     cursor: pointer;
@@ -184,18 +194,77 @@ body {
     background-color: rgb(198, 197, 197);
 }
 
+/* Carrito */
+.carrito {
+    color: white;
+    text-decoration: underline;
+    font-size: 5rem;
+}
+
+.titulo-tabla {
+    font-size: 4rem;
+    padding: .5rem;
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+table {
+    width: 90%;
+    margin: 4rem;
+    table-layout: fixed;
+    border-collapse: collapse;
+    empty-cells: hide;
+    border-radius: 10px;
+}
+
+thead {
+    font-size: 2rem;
+    background-color: #ec5e59dc;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+}
+
+tbody {
+    font-size: 1.5rem;
+}
+
+.total {
+    font-size: 2rem;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.botones button {
+    padding: 0rem;
+    margin: 2rem;
+    font-size: 2rem;
+    flex: auto;
+
+}
+
 /* Footer */
 footer {
     font-size: 1.5rem;
     color: rgb(60, 58, 58);
     background: rgb(249, 249, 249);
-    margin-top: 5rem;
     box-shadow: 0 2px 4px 0 rgba(6, 6, 6, 0.6);
 }
 
 footer i {
     text-decoration: none;
     font-size: 1.8rem;
-    color: #ec5e59dc;
+    color: #ef6277;
     margin-left: 0.5rem;
 }
