@@ -1,0 +1,40 @@
+/* ***************************** MOBILE ***************************** */
+
+/*==================== FOOTER ==================== */
+footer {
+    color: rgb(60, 58, 58);
+    background: rgb(249, 249, 249);
+    margin-top: 3rem;
+    box-shadow: 0 2px 4px 0 rgba(6, 6, 6, 0.6);
+    a,
+    p {
+        font-size: 1.3rem;
+        i {
+            text-decoration: none;
+            font-size: 1.8rem;
+            color: #ef6277;
+            margin-left: 0.5rem;
+
+            &:hover {
+                background-color: rgb(60, 58, 58);
+                border-radius: 3px;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+/* ***************************** MIN-WIDTH 768px *********************** */
+
+@media (min-width:768px) {
+
+    footer {
+        a,
+        p {
+            font-size: 2rem;
+            i {
+                font-size: 2rem;
+            }
+        }
+    }
+}

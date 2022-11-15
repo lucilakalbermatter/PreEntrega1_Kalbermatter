@@ -1,0 +1,58 @@
+
+/* ***************************** MOBILE ***************************** */
+
+/*==================== INICIO ==================== */
+.button-buy {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #ef6277;
+    font-size: 1.8rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
+.button-buy:hover {
+    color: white;
+    background-color: #ec5e5986;
+}
+
+/*==================== CARRITO ==================== */
+.botones {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.botones button {
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 1rem;
+    flex: auto;
+}
+
+#button-discount {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    background-color: grey;
+    font-size: 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* ***************************** MIN-WIDTH 768px ***************************** */
+
+@media (min-width:768px) {
+
+    /*==================== CARRITO ==================== */
+    .botones button {
+        margin: 3rem;
+        font-size: 1.5rem;
+        flex: auto;
+    }
+
+    #button-discount {
+        font-size: 1.5rem;
+    }
+    
+}

@@ -1,0 +1,480 @@
+/*==================== FUENTES ==================== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,200&display=swap");
+/*==================== GENERALES ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #eecda3, #ef6277);
+  min-height: 100vh;
+}
+
+/* ***************************** MOBILE ***************************** */
+/*==================== HEADER ==================== */
+nav .container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .navLogo img {
+  margin: 1rem;
+  height: 2rem;
+}
+nav .carrito {
+  font-size: 2.5rem;
+}
+nav .carrito i {
+  color: black;
+  margin: 1rem;
+}
+
+/* ***************************** MIN-WIDTH 768px ***************************** */
+@media (min-width: 768px) {
+  nav .navLogo img {
+    margin: 1.5rem;
+    height: 3rem;
+  }
+  nav .carrito {
+    font-size: 3rem;
+  }
+}
+/* ***************************** MOBILE ***************************** */
+/*==================== INICIO ==================== */
+.button-buy {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #ef6277;
+  font-size: 1.8rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+.button-buy:hover {
+  color: white;
+  background-color: rgba(236, 94, 89, 0.5254901961);
+}
+
+/*==================== CARRITO ==================== */
+.botones {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.botones button {
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 1rem;
+  flex: auto;
+}
+
+#button-discount {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  background-color: grey;
+  font-size: 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* ***************************** MIN-WIDTH 768px ***************************** */
+@media (min-width: 768px) {
+  /*==================== CARRITO ==================== */
+  .botones button {
+    margin: 3rem;
+    font-size: 1.5rem;
+    flex: auto;
+  }
+  #button-discount {
+    font-size: 1.5rem;
+  }
+}
+/*==================== ERROR PAGE ==================== */
+#error-page {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #eecda3, #ef6277);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#error-page .content {
+  text-align: center;
+}
+
+.content h2.header {
+  font-size: 30vw;
+  line-height: 1em;
+  position: relative;
+}
+
+.content h2.header:after {
+  position: absolute;
+  content: attr(data-text);
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+}
+
+.content h4 {
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 4rem;
+  position: relative;
+}
+
+.content p {
+  font-size: 3rem;
+  color: #0d0d0d;
+}
+
+.content .btns {
+  margin: 25px 0;
+  display: inline-flex;
+}
+
+.content .btns a {
+  font-size: large;
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  border: 2px solid black;
+  color: black;
+  background-color: white;
+  font-weight: 500;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-transform: uppercase;
+}
+
+.content .btns a:hover {
+  background: #ef6277;
+  color: white;
+}
+
+/* ***************************** MOBILE ***************************** */
+/*==================== FOOTER ==================== */
+footer {
+  color: rgb(60, 58, 58);
+  background: rgb(249, 249, 249);
+  margin-top: 3rem;
+  box-shadow: 0 2px 4px 0 rgba(6, 6, 6, 0.6);
+}
+footer a,
+footer p {
+  font-size: 1.3rem;
+}
+footer a i,
+footer p i {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #ef6277;
+  margin-left: 0.5rem;
+}
+footer a i:hover,
+footer p i:hover {
+  background-color: rgb(60, 58, 58);
+  border-radius: 3px;
+  padding: 5px;
+}
+
+/* ***************************** MIN-WIDTH 768px *********************** */
+@media (min-width: 768px) {
+  footer a,
+footer p {
+    font-size: 2rem;
+  }
+  footer a i,
+footer p i {
+    font-size: 2rem;
+  }
+}
+/* ***************************** MOBILE ***************************** */
+/*==================== INICIO ==================== */
+/* Section Main-container */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.887);
+  height: 90vh;
+}
+
+.box-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 20%;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 200;
+}
+
+.box-img {
+  background-image: url(../images/main1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  height: 80%;
+}
+
+/* Section Title */
+.title {
+  text-align: center;
+  padding: 1.3rem;
+  margin-top: 2rem;
+}
+
+.title h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+
+/* Section Productos-container */
+.products-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  margin: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 4px 0 rgba(6, 6, 6, 0.6);
+  color: black;
+  background-color: white;
+  width: 80%;
+  height: 350px;
+  align-items: center;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card-body h4 {
+  font-size: 2.8rem;
+}
+
+.card-text {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.card-text li {
+  text-align: start;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: black;
+}
+
+.card-price {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+/*==================== CARRITO ==================== */
+.carrito {
+  color: black;
+  text-decoration: underline;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.titulo-tabla {
+  font-size: 1rem;
+  padding: 0.5rem;
+  text-decoration: underline;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+table {
+  margin-bottom: 0;
+  table-layout: fixed;
+  border-collapse: collapse;
+  empty-cells: hide;
+  border-radius: 10px;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 10px;
+  text-align: center;
+}
+
+tbody {
+  font-size: 1.1rem;
+}
+
+.total {
+  font-size: 1.1rem;
+}
+
+.descuento {
+  display: flex;
+  padding: 1rem;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1rem;
+}
+
+label {
+  margin: 1rem;
+}
+
+input {
+  width: 30rem;
+}
+input::-moz-placeholder {
+  text-align: center;
+}
+input:-ms-input-placeholder {
+  text-align: center;
+}
+input::placeholder {
+  text-align: center;
+}
+
+/* ***************************** MIN-WIDTH 425px ***************************** */
+@media (min-width: 425px) {
+  /*==================== INICIO ==================== */
+  /* Section Main-container */
+  .box-img {
+    background-size: contain;
+    background-position: center;
+    height: 100%;
+  }
+  /* Section Title */
+  .title h1 {
+    font-size: 2.5rem;
+  }
+  /* Section Products-container */
+  .card {
+    width: 60%;
+  }
+}
+/* ***************************** MIN-WIDTH 768px ***************************** */
+@media (min-width: 768px) {
+  /*==================== INICIO ==================== */
+  /* Section Main-container */
+  .box-img {
+    background-size: contain;
+    height: 100%;
+  }
+  /* Section Title */
+  .title h1 {
+    font-size: 3rem;
+  }
+  /* Section Products-container */
+  .card {
+    width: 55%;
+  }
+  .card-text {
+    font-size: 2rem;
+  }
+  /*==================== CARRITO ==================== */
+  .carrito {
+    font-size: 4rem;
+  }
+  .titulo-tabla {
+    font-size: 2rem;
+  }
+  td,
+th {
+    font-size: 1.5rem;
+  }
+  tbody {
+    font-size: 1.5rem;
+  }
+  .total {
+    font-size: 1.5rem;
+  }
+  .descuento {
+    display: flex;
+    padding: 2rem;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 2rem;
+  }
+  label {
+    margin: 1rem;
+  }
+  input {
+    width: 30rem;
+  }
+  input::-moz-placeholder {
+    text-align: center;
+  }
+  input:-ms-input-placeholder {
+    text-align: center;
+  }
+  input::placeholder {
+    text-align: center;
+  }
+  /* ***************************** MIN-WIDTH 1024px ***************************** */
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  /*==================== INICIO ==================== */
+  /* Section Productos-container */
+  .products-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .card {
+    width: 30%;
+    height: 450px;
+  }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+  }
+  .card-price {
+    margin-bottom: 0;
+  }
+  /*==================== CARRITO ==================== */
+  .container {
+    width: 70%;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,6 +1,8 @@
-const container = document.querySelector("div.products-container")
+const container = document.querySelector("section.products-container")
 const carrito = []
 let cantidad = 1
+let productos = []
+const URL = "../serverinfo/productos.json"
 
 class Producto {
     constructor(numero, titulo, precio, cantidad) {
@@ -27,6 +29,24 @@ const retornoCard = (producto) => {
             </div>`
 }
 
+const errorMessage = () => {
+    return `<div id="error-page">
+                <div class="content">
+                    <h2 class="header" data-text="404">
+                    404
+                    </h2>
+                    <h4>
+                    Opps! Página no encontrada
+                    </h4>
+                    <p>
+                    Lo siento, la página que buscas no existe o algo funciona mal.
+                    </p>
+                <div class="btns">
+                    <a href="./index.html">report problem</a>
+                </div>
+                </div>
+            </div>`
+}
 
 const activarBotonesAdd = () => {
     const botonesAdd = document.querySelectorAll(".button-buy")
@@ -37,13 +57,21 @@ const activarBotonesAdd = () => {
     })
 }
 
+const cargarMisProductos = async () => {
+    container.innerHTML = " "
 
-const cargarMisProductos = () => {
-    container.innerHTML = ""
-    productos.forEach(producto => {
-        container.innerHTML += retornoCard(producto)
-    })
-    activarBotonesAdd()
+    try {
+        const respuesta = await fetch(URL)
+        productos = await respuesta.json()
+        productos.forEach(producto => {
+            container.innerHTML += retornoCard(producto)
+        })
+    } catch (error) {
+        container.innerHTML = errorMessage()
+    } finally {
+        activarBotonesAdd()
+    }
+
 }
 cargarMisProductos()
 
@@ -89,4 +117,5 @@ const recuperarCarrito = () => {
         });
     }
 }
+
 recuperarCarrito()
