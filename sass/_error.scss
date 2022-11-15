@@ -1,0 +1,72 @@
+/*==================== ERROR PAGE ==================== */
+
+#error-page {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #eecda3, #ef6277);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#error-page .content {
+  text-align: center;
+}
+
+.content h2.header {
+  font-size: 30vw;
+  line-height: 1em;
+  position: relative;
+}
+
+.content h2.header:after {
+  position: absolute;
+  content: attr(data-text);
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+}
+
+.content h4 {
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 4rem;
+  position: relative;
+}
+
+.content p {
+  font-size: 3rem;
+  color: #0d0d0d;
+}
+
+.content .btns {
+  margin: 25px 0;
+  display: inline-flex;
+}
+
+.content .btns a {
+  font-size: large;
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  border: 2px solid black;
+  color: black;
+  background-color: white;
+  font-weight: 500;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-transform: uppercase;
+}
+
+.content .btns a:hover {
+  background: #ef6277;
+  color: white;
+}

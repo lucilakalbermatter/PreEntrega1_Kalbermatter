@@ -1,0 +1,296 @@
+@import "fuentes";
+@import "generales";
+@import "header";
+@import "botones";
+@import "error";
+@import "footer";
+
+/* ***************************** MOBILE ***************************** */
+
+/*==================== INICIO ==================== */
+
+/* Section Main-container */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.887);
+    height: 90vh;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 200;
+}
+
+.box-img {
+    background-image: url(../images/main1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    height: 80%;
+}
+
+/* Section Title */
+.title {
+    text-align: center;
+    padding: 1.3rem;
+    margin-top: 2rem;
+}
+
+.title h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+
+/* Section Productos-container */
+.products-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    margin: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px 0 rgba(6, 6, 6, 0.6);
+    color: black;
+    background-color: white;
+    width: 80%;
+    height: 350px;
+    align-items: center;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-body h4 {
+    font-size: 2.8rem;
+}
+
+.card-text {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.card-text li {
+    text-align: start;
+    margin-bottom: 1rem;
+}
+
+.card-title {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: black;
+}
+
+.card-price {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+/*==================== CARRITO ==================== */
+.carrito {
+    color: black;
+    text-decoration: underline;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.titulo-tabla {
+    font-size: 1rem;
+    padding: .5rem;
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+table {
+    margin-bottom: 0;
+    table-layout: fixed;
+    border-collapse: collapse;
+    empty-cells: hide;
+    border-radius: 10px;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+    text-align: center;
+}
+
+tbody {
+    font-size: 1.1rem;
+}
+
+.total {
+    font-size: 1.1rem;
+}
+
+.descuento {
+    display: flex;
+    padding: 1rem;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1rem;
+}
+
+label {
+    margin: 1rem;
+}
+
+input{
+    width:30rem;
+    &::placeholder{
+        text-align: center;
+    }
+}
+
+/* ***************************** MIN-WIDTH 425px ***************************** */
+
+@media (min-width:425px) {
+
+    /*==================== INICIO ==================== */
+
+    /* Section Main-container */
+    .box-img {
+        background-size: contain;
+        background-position: center;
+        height: 100%;
+    }
+
+    /* Section Title */
+    .title h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Section Products-container */
+    .card {
+        width: 60%;
+    }
+}
+
+/* ***************************** MIN-WIDTH 768px ***************************** */
+
+@media (min-width:768px) {
+
+    /*==================== INICIO ==================== */
+
+    /* Section Main-container */
+    .box-img {
+        background-size: contain;
+        height: 100%;
+    }
+
+    /* Section Title */
+    .title h1 {
+        font-size: 3rem;
+    }
+
+    /* Section Products-container */
+    .card {
+        width: 55%;
+    }
+
+    .card-text {
+        font-size: 2rem;
+    }
+
+    /*==================== CARRITO ==================== */
+    .carrito {
+        font-size: 4rem;
+    }
+
+    .titulo-tabla {
+        font-size: 2rem;
+    }
+
+    td,
+    th {
+        font-size: 1.5rem;
+    }
+
+    tbody {
+        font-size: 1.5rem;
+    }
+
+    .total {
+        font-size: 1.5rem;
+    }
+
+    .descuento {
+        display: flex;
+        padding: 2rem;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 2rem;
+    }
+    
+    label {
+        margin: 1rem;
+    }
+    
+    input{
+        width:30rem;
+        &::placeholder{
+            text-align: center;
+        }
+    }
+
+    /* ***************************** MIN-WIDTH 1024px ***************************** */
+
+    @media (min-width:1024px) {
+
+        /*==================== INICIO ==================== */
+
+        /* Section Productos-container */
+        .products-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .card {
+            width: 30%;
+            height: 450px;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-content: center;
+            align-items: center;
+        }
+
+        .card-price {
+            margin-bottom: 0;
+        }
+
+        /*==================== CARRITO ==================== */
+        .container {
+            width: 70%;
+        }
+    }
+}
